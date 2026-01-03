@@ -1,28 +1,28 @@
-# Change these first
-owner: [Tên-GitHub-Của-Bạn] # Thay bằng Username GitHub của bạn (ví dụ: truonghoc)
-repo: [Tên-Repository-Của-Bạn] # Thay bằng tên Repo bạn vừa tạo (ví dụ: website-monitor)
+# Cấu hình chính xác cho tài khoản của bạn
+owner: 2351010236-droid
+repo: website-monitor
 
+# Danh sách trang web cần theo dõi
 sites:
   - name: ParadiseHRM NAVT
     url: https://navt.paradisehrm.com
 
 status-website:
-  # Nếu bạn không có tên miền riêng (domain), hãy để dấu # trước cname như dưới đây
-  # cname: demo.upptime.js.org
-  
-  # Bỏ dấu # ở dòng baseUrl và điền /tên-repo của bạn vào để trang web hoạt động
-  baseUrl: /[Tên-Repository-Của-Bạn] 
-  
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
+  # Tên hiển thị trên trang Status Page
   name: ParadiseHRM Status
-  introTitle: "**Hệ thống theo dõi trạng thái ParadiseHRM**"
-  introMessage: Trang web này theo dõi thời gian hoạt động (uptime) của hệ thống ParadiseHRM hoàn toàn tự động.
+  introTitle: "**Hệ thống giám sát trạng thái ParadiseHRM**"
+  introMessage: Trang web này theo dõi thời gian hoạt động của ParadiseHRM hoàn toàn tự động.
+  
+  # Cấu hình đường dẫn cho GitHub Pages (Rất quan trọng để hết lỗi 404)
+  baseUrl: /website-monitor
+  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
+  
   navbar:
     - title: Status
       href: /
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
 
-# Cấu hình kiểm tra mỗi 5 phút một lần
+# Kiểm tra mỗi 5 phút
 workflow-schedule:
   uptime: "*/5 * * * *"
