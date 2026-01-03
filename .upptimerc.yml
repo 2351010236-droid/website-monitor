@@ -1,28 +1,18 @@
-# Cấu hình chính xác cho tài khoản của bạn
 owner: 2351010236-droid
 repo: website-monitor
 
-# Danh sách trang web cần theo dõi
 sites:
   - name: ParadiseHRM NAVT
     url: https://navt.paradisehrm.com
 
 status-website:
-  # Tên hiển thị trên trang Status Page
+  # Điền tên miền của bạn vào đây
+  cname: serverless.thithiencorp.dpdns.org
+  # Khi dùng tên miền riêng, baseUrl PHẢI là dấu gạch chéo
+  baseUrl: /
   name: ParadiseHRM Status
-  introTitle: "**Hệ thống giám sát trạng thái ParadiseHRM**"
-  introMessage: Trang web này theo dõi thời gian hoạt động của ParadiseHRM hoàn toàn tự động.
-  
-  # Cấu hình đường dẫn cho GitHub Pages (Rất quan trọng để hết lỗi 404)
-  baseUrl: /website-monitor
+  introTitle: "**Hệ thống giám sát ParadiseHRM**"
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  
   navbar:
     - title: Status
       href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
-
-# Kiểm tra mỗi 5 phút
-workflow-schedule:
-  uptime: "*/5 * * * *"
