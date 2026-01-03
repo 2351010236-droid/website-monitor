@@ -1,18 +1,26 @@
+# Cấu hình chuẩn để chạy trên github.io
 owner: 2351010236-droid
 repo: website-monitor
 
+# Trang web bạn đang theo dõi
 sites:
   - name: ParadiseHRM NAVT
     url: https://navt.paradisehrm.com
 
 status-website:
-  # Điền tên miền của bạn vào đây
-  cname: serverless.thithiencorp.dpdns.org
-  # Khi dùng tên miền riêng, baseUrl PHẢI là dấu gạch chéo
-  baseUrl: /
+  #baseUrl phải khớp với tên Repository để tránh lỗi giao diện
+  baseUrl: /website-monitor
+  
+  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
   name: ParadiseHRM Status
   introTitle: "**Hệ thống giám sát ParadiseHRM**"
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
+  introMessage: Trang web này theo dõi thời gian hoạt động của ParadiseHRM hoàn toàn tự động qua GitHub Actions.
   navbar:
     - title: Status
       href: /
+    - title: GitHub
+      href: https://github.com/$OWNER/$REPO
+
+# Kiểm tra tự động mỗi 5 phút
+workflow-schedule:
+  uptime: "*/5 * * * *"
